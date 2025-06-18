@@ -1,0 +1,6 @@
+streamlit>=1.35.0
+yfinance>=0.2.36
+curl_cffi>=0.5.10
+pandas>=2.2.2
+numpy>=1.26.4
+scipy>=1.13.0
