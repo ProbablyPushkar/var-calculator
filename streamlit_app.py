@@ -49,9 +49,9 @@ if st.button("Calculate VaR"):
         pct_returns, log_returns = calculate_returns(combined_df)
 
         if method == "Historical":
-            var = historical_var(pct_returns, confidence_level=confidence, weights=weights)
+            var = historical_var(pct_returns, confidence_level=confidence, weights=weights,time_horizon=horizon)
         elif method == "Variance-Covariance":
-            var = parametric_var(log_returns, confidence_level=confidence, weights=weights)
+            var = parametric_var(log_returns, confidence_level=confidence, weights=weights,time_horizon=horizon)
         elif method == "Monte Carlo":
             var = monte_carlo_var(log_returns, confidence_level=confidence,
                                   weights=weights, num_simulations=simulations, time_horizon=horizon)
